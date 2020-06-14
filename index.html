@@ -1,0 +1,66 @@
+<html>
+    <head>
+       <title>Online Book Recommendation</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+$(document).ready(function(){
+
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+    </head>
+    
+    <body>        
+      <header>
+           <nav>
+               <ul id="nav">
+                  <li><a class="homegray" href="#home">Home</a></li>
+                  <li><a class="AboutUsblack" href="#About">About Us</a></li>
+                  <li><a class="Productblack" href="#Product">Products</a></li>
+                  <li><a class="Contactblack" href="#Contact">Contacts</a></li>
+               </ul>
+           </nav>
+      </header>
+
+
+<div class="main" id="home">
+  <section> </section>
+</div>
+
+<div class="main" id="About">
+  <section>
+    <p>About Us</p>
+      
+    </section>
+</div>
+        
+
+<div class="main" id="Product">
+  <section>
+    <a href="product.html"> <img src="product.jpg" alt="books"></a>
+    </section>
+</div> 
+        
+<div class="main" id="Contact">
+  <section>
+   
+        <p> contact us</p>
+    </section>
+</div>         
+        
+        
+        
+    </body>
+</html>
