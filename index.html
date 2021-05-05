@@ -1,66 +1,143 @@
-<html>
-    <head>
-       <title>Online Book Recommendation</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script>
-$(document).ready(function(){
+<!DOCTYPE html>
+<html lang="en">
 
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-    </head>
-    
-    <body>        
-      <header>
-           <nav>
-               <ul id="nav">
-                  <li><a class="homegray" href="#home">Home</a></li>
-                  <li><a class="AboutUsblack" href="#About">About Us</a></li>
-                  <li><a class="Productblack" href="#Product">Products</a></li>
-                  <li><a class="Contactblack" href="#Contact">Contacts</a></li>
-               </ul>
-           </nav>
-      </header>
+  <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<div class="main" id="home">
-  <section> </section>
-</div>
+    <title>BookShop</title>
 
-<div class="main" id="About">
-  <section>
-    <p>About Us</p>
-      
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h1 class="brand-heading"> Welcome</h1>
+              <p class="intro-text">Visit Our Online Book Shop</p>
+              <a href="#about" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>About Us</h2>
+            <p> Online Book Shopping</p>
+              <p>You are at right place!  Online Book shopping offering many kinds of book together.</p>
+              <p>System also provide Rating to find the best book.</p>
+          </div>
+        </div>
+      </div>
     </section>
-</div>
-        
 
-<div class="main" id="Product">
-  <section>
-    <a href="product.html"> <img src="product.jpg" alt="books"></a>
+    <!--Product Section -->
+    <section id="download" class="download-section content-section text-center">
+      <div class="container">
+        <div class="col-lg-8 mx-auto">
+          <a href="product.html"><img src="product.jpg" alt="books" height="340" width="440"></a>
+        </div>
+      </div>
     </section>
-</div> 
-        
-<div class="main" id="Contact">
-  <section>
-   
-        <p> contact us</p>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact Us</h2>
+            <p>For any query just contact through these</p>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">Github</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                  <span class="network-name">Google+</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
-</div>         
-        
-        
-        
-    </body>
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+
+  </body>
+
 </html>
